@@ -99,13 +99,16 @@ function App() {
 
 
         </div>
-        
+        <Map
+          center={mapCenter}
+          zoom={mapZoom}
+        />
         
         {/*Map*/}
-        <Map
+        {/*<Map
           center={MapCenter}
           zoom={MapZoom}
-        />
+        />*/}
      </div>
       <Card className="app__right">
         <CardContent>
