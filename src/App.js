@@ -105,7 +105,7 @@ function App() {
         />
         
         {/*Map*/}
-        {/*<Map
+        {/*<Map test
           center={MapCenter}
           zoom={MapZoom}
         />*/}
