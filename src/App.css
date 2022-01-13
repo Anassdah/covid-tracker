@@ -2,25 +2,60 @@
   margin: 0;
 }
 body{
-  background-color:#fefee2;
+  background-color: #f4f5dbe8;
 }
 .app {
   display:flex;
   justify-content:space-evenly;
   padding:20px;
 }
+.app__dropdown {
+  background-color: rgb(255, 255, 255);
+}
 .app__header{
   display:flex;
   align-items:center;
   margin-bottom: 20px;
+
   justify-content: space-between;
 }
+.app__header div:nth-child(2){
+  width: 200px;
+  text-align: center ;
+  justify-content: center;
+  margin-right: 15px;
+
+} 
+.app__header > h1 {
+  color: rgba(11, 11, 12, 0.819);
+  font-size: 2rem;
+  font-family: cursive}
 .app__stats{
   display:flex;
   justify-content: space-between;
 }
+.app__stats .MuiCardContent-root{
+  width: 180px;
+  margin: 10px;
+}
+.app__stats .MuiPaper-root{
+  margin: 10px;
+  border-width:1px;
+  border-style: solid;
+  border-color: rgba(6, 6, 7, 0.875);
+}
+
+
+  
+.app__left {
+  flex: 0.5;
+}
+.app__information{
+  height: 90%;
+  padding-left: 10px;
+}
 .app__information > h3 {
-  color: #6a5d5d;
+  color: rgb(20, 65, 154);;
   font-weight: 400;
   font-size: 1.5rem;
   margin-bottom: 1rem;
