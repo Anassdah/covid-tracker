@@ -61,14 +61,24 @@ const App = () => {
       countryCode === "worldwide"
         ? "https://disease.sh/v3/covid-19/all"
         : `https://disease.sh/v3/covid-19/countries/${countryCode}`;
-    await fetch(url)
+    if(countryCode!=="worldwide"){ await fetch(url)
       .then((response) => response.json())
       .then((data) => {
         setInputCountry(countryCode);
         setCountryInfo(data);
         setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
-        setMapZoom(4);
-      });
+        setMapZoom(4);})}
+        else{
+          await fetch(url)
+          .then((response) => response.json())
+          .then((data) => {
+            setInputCountry(countryCode);
+            setCountryInfo(data);
+            setMapZoom(1);
+            })
+        }
+   
+      ;
   };
 
   return (
