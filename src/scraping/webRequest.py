@@ -13,6 +13,6 @@ response.status_code #check if request id successful
 #print(response.text[:1000])
 #Extract the contents of the web page from the response
 soup_response=soup(response.text,"html.parser")# Parse the text as a beautiful soup object
-soup_sample= soup(response.text[:1000],"html.parser")#Parse a sample of the text
-print(soup_sample)
+soup_sample= soup(response.text[:10000],"html.parser")#Parse a sample of the text
+print(str(soup_sample))
 
