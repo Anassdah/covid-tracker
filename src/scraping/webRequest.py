@@ -14,5 +14,11 @@ response.status_code #check if request id successful
 #Extract the contents of the web page from the response
 soup_response=soup(response.text,"html.parser")# Parse the text as a beautiful soup object
 soup_sample= soup(response.text[:10000],"html.parser")#Parse a sample of the text
-print(str(soup_sample))
+#print(str(soup_sample))
+sections=soup_response.find_all("div",id="maincounter-wrap")
+#print(str(sections)) note: len(sections)=3
+cases=sections[0].find("span").text.replace(" ","").replace(",","")#text replace to clean spaces and commas
+deaths=sections[1].find("span").text.replace(",","")
+recov=sections[2].find("span").text.replace(",","")
+print("Number of cases:{};deaths:{};recoveries:{}".format(cases,deaths,recov))
 
